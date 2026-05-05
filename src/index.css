@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-fixed: #c3f400;
+  --color-surface: #131313;
+  --color-surface-container: #1f1f1f;
+  --color-surface-variant: #353535;
+  --color-on-surface: #e2e2e2;
+  --color-on-surface-variant: #c4c9ac;
+  --color-outline-variant: #444933;
+  
+  --font-sans: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --drop-shadow-neon: 0 0 10px #c3f400;
+  --drop-shadow-neon-strong: 0 0 20px rgba(195, 244, 0, 0.6);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.neon-glow {
+  filter: drop-shadow(var(--drop-shadow-neon));
+}
+
+.neon-glow-strong {
+  filter: drop-shadow(var(--drop-shadow-neon-strong));
+}
+
+/* Custom scrollbar for cyber feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #353535;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c3f400;
+}
